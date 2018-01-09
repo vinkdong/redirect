@@ -1,0 +1,23 @@
+static:
+  data:
+    xx: yy
+    zz: pp
+    var-service: service
+  template:
+    _g: (refreshInterval:(display:Off,pause:!f,value:0),time:(from:'{{ $.from }}',mode:absolute,to:'{{ $.to }}'))
+    _a: (columns:!(_source),index:{{ $.service }},interval:auto,query:(language:lucene,query:'{{ $.query }}'),sort:!('@timestamp',desc))
+  time:
+    keys:
+      - from
+      - to
+    from:
+      format: timestamp
+      unit: ms
+    to:
+      format: 2006-01-02T15:04:05.000Z
+      unit: ms
+      tz: Asia/Shanghai
+    skip:
+      - now.*
+destination:
+  all: http://kibana.vinkdong.com/app/kibana#/discover
