@@ -17,7 +17,7 @@ execute
 ./redirect --conf config.yaml
 ```
 
-a simple config file like follow:
+a simple config file like following:
 
 ```yaml
 static:
@@ -45,10 +45,10 @@ destination:
   all: http://kibana.vinkdong.com/app/kibana#/discover
 ```
 
-- in <b>static.data</b> transfer key xx-->yy,zz-->pp,var-service-->service,such as source link is `localhost?aa=100&&zz=99` will transfer to `http://kibana.vinkdong.com/app/kibana#/discover?yy=100&&pp=99`
+- In <b>static.data</b> transfer key xx-->yy,zz-->pp,var-service-->service,such as source link is `localhost?xx=100&&zz=99` will transfer to `http://kibana.vinkdong.com/app/kibana#/discover?yy=100&&pp=99`
 
-- in <b>static.template</b> it will add the key to the parameter and execute the template values
+- In <b>static.template</b> it will add the key to the parameter and execute the template values
 
-- in <b>static.time</b> tail program which key is time key, and transfer to special time format, all time format in standard goland is supported, bth you can ignore some special time value by regex
+- In <b>static.time</b> tail program which key is time key, and transfer to individual time format, the all-time format in standard goland have supported, BTW you can ignore some particular time value by regex
 
-- in <b>destination.all</b> default destination
+- In <b>destination.all</b> default destination
